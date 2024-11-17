@@ -283,6 +283,7 @@ app.get('/block-explorer', function(req, res) {
 
 app.get('/last', function(req, res) {
 	const lastBlock = bitcoin.getLastBlock();
+	res.json(lastBlock);
 });
 
 app.listen(port, function() {
